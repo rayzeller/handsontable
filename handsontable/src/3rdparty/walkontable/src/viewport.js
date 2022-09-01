@@ -445,10 +445,11 @@ class Viewport {
       return false;
     }
 
-    const { startRow, endRow } = proposedRowsVisibleCalculator;
+    const { startRow, endRow, count } = proposedRowsVisibleCalculator;
 
-    // if there are no fully visible rows at all, return false
-    if (startRow === null && endRow === null) {
+    // If there are some rows and they are not fully visible, return false. For oversized rows,
+    // there needs to be performed full render cycle.
+    if (count > 0 && startRow === null && endRow === null) {
       return false;
     }
 
@@ -478,10 +479,11 @@ class Viewport {
       return false;
     }
 
-    const { startColumn, endColumn } = proposedColumnsVisibleCalculator;
+    const { count, startColumn, endColumn } = proposedColumnsVisibleCalculator;
 
-    // if there are no fully visible columns at all, return false
-    if (startColumn === null && endColumn === null) {
+    // If there are some columns and they are not fully visible, return false. For oversized columns,
+    // there needs to be performed full render cycle.
+    if (count > 0 && startColumn === null && endColumn === null) {
       return false;
     }
 
