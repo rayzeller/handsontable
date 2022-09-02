@@ -15,13 +15,13 @@ tags:
 ::: only-for javascript
 Play around with a demo of Handsontable, in your favorite framework.
 
-<DemoJS fullVersionNumber="12.1.1" />
+<Demo fullVersionNumber="12.1.1" framework="javascript" />
 :::
 
 ::: only-for react
 Play around with a demo of Handsontable, in React.
 
-<DemoReact fullVersionNumber="12.1.1" />
+<Demo fullVersionNumber="12.1.1" framework="react" />
 :::
 
 ## Find the code on GitHub
@@ -47,7 +47,7 @@ Explore the demo and discover Handsontable's most popular features:
 - [Dropdown cell type](@/guides/cell-types/dropdown-cell-type.md)
 - [Column groups](@/guides/columns/column-groups.md)
 - [Column menu](@/guides/columns/column-menu.md)
-- [Column filter](@/guides/columns/column-filter.md)- 
+- [Column filter](@/guides/columns/column-filter.md)-
 - [Column hiding](@/guides/columns/column-hiding.md)
 - [Row sorting](@/guides/rows/row-sorting.md)
 - And more!

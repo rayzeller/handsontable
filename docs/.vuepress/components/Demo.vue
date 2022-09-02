@@ -6,14 +6,20 @@
 import { convertRelativeToAbsoluteAttributeUrl } from './demo-common';
 
 export default {
-  name: 'DemoJS',
+  name: 'Demo',
   props: {
     fullVersionNumber: {
       required: true,
     },
+    framework: {
+      required: true,
+    },
   },
   mounted() {
-    const url = `https://examples.handsontable.com/examples/${this.fullVersionNumber}/docs/js/demo/index.html`;
+    const framework = this.framework === 'javascript' ? 'js' : this.framework;
+    const url = `https://examples.handsontable.com/examples/${this.fullVersionNumber}/docs/${framework}/demo/index.html`;
+
+    console.log(url);
 
     fetch(url)
       .then((response) => {
