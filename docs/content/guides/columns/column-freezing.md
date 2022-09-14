@@ -60,7 +60,7 @@ registerAllModules();
 
 const ExampleComponent = () => {
   return (
-    <HotTable
+    <HotTablee
       data={Handsontable.helper.createSpreadsheetData(100, 50)}
       colWidths={100}
       width="100%"
