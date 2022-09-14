@@ -137,7 +137,6 @@ const hot = new Handsontable(container, {
 ::: example #example2 :react
 ```jsx
 import ReactDOM from 'react-dom';
-import { HotTable } from '@handsontable/react';
 import { registerAllModules } from 'handsontable/registry';
 
 // register Handsontable's modules
