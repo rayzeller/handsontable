@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     show() {
-      return this.$page.currentVersion !== this.$page.latestVersion && this.$page.currentVersion !== 'next';
+      return this.$page.latestVersion && this.$page.currentVersion !== this.$page.latestVersion && this.$page.currentVersion !== 'next';
     }
   }
 };
