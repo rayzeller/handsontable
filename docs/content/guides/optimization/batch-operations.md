@@ -61,7 +61,8 @@ Suspending the render results in better performance, which is especially noticea
 
 ![batch_operations_comparison](/docs/{{$page.currentVersion}}/img/batch_operations_comparison.png)
 
-:::tip Note that other methods can be used to batch operations, but they are slightly more advanced and should be used with caution. Flickering, glitches or other visual distortion may happen when you forget to `resume` render after suspending it several times. Mixing methods of a render type with those focused on operations can also result in some unexpected behavior. Above all, [`batch()`](@/api/core.md#batch) should be sufficient in most use cases, and it is safe to work with.
+:::tip
+Note that other methods can be used to batch operations, but they are slightly more advanced and should be used with caution. Flickering, glitches or other visual distortion may happen when you forget to `resume` render after suspending it several times. Mixing methods of a render type with those focused on operations can also result in some unexpected behavior. Above all, [`batch()`](@/api/core.md#batch) should be sufficient in most use cases, and it is safe to work with.
 :::
 
 ## API methods
@@ -136,7 +137,9 @@ hot.batchExecution(() => {
 
 #### [`suspendRender()`](@/api/core.md#suspendrender) and [`resumeRender()`](@/api/core.md#resumerender)
 
-To suspend the rendering process, you can call the [`suspendRender()`](@/api/core.md#suspendrender) method just before the actions you want to batch. This is a manual approach. After suspending, you must remember to resume the process with the [`resumeRender()`](@/api/core.md#resumerender) method.
+To suspend the rendering process, call the [`suspendRender()`](@/api/core.md#suspendrender) method just before the actions you want to batch. This is a manual approach.
+
+After suspending, resume the process with the [`resumeRender()`](@/api/core.md#resumerender) method. Every [`suspendRender()`](@/api/core.md#suspendrender) call needs to correspond with one [`resumeRender()`](@/api/core.md#resumerender) call. For example, if you call [`suspendRender()`](@/api/core.md#suspendrender) 5 times, you need to call [`resumeRender()`](@/api/core.md#resumerender) 5 times as well.
 
 ```js
 hot.suspendRender(); // suspend rendering

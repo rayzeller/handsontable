@@ -20,7 +20,7 @@ The following guide provides information on using a data source and manipulating
 
 ### Array of arrays
 
-Array of arrays is the most popular choice for the more grid-like scenarios where you need to provide the end-user with permission to manipulate the grid, e.g., insert columns, delete rows, decorate cells, etc.
+Array of arrays is a good choice for the more grid-like scenarios where you need to provide the end user with permission to manipulate the grid, e.g., insert columns, delete rows, decorate cells, etc.
 
 ::: example #example1
 ```js
@@ -284,12 +284,28 @@ function property(attr) {
 ```
 :::
 
+### No data
+
+By default, if you don't provide any data, Handsontable renders as an empty 5x5 grid.
+
+::: example #example9
+```js
+const container = document.getElementById('example9');
+
+const hot = new Handsontable(container, {
+  licenseKey: 'non-commercial-and-evaluation'
+});
+```
+:::
+
+To change the number of rows or columns rendered by default, use the [`startRows`](@/api/options.md#startrows) and [`startCols`](@/api/options.md#startcols) options.
+
 ## Data-manipulating API methods
 
 There are multiple ways you can insert your data into Handsontable. Let's go through the most useful ones:
 
 ### The [`data`](@/api/options.md#data) configuration option
-You will probably want to initialize the table with some data (if you don't, the table will render a 5x5 empty grid for you). The easiest way to do it is passing your data array as [`data`](@/api/options.md#data) option in the initial config object:
+You will probably want to initialize the table with some data (if you don't, the table will render an empty 5x5 grid for you). The easiest way to do it is passing your data array as [`data`](@/api/options.md#data) option in the initial config object:
 ```js
 const hot = new Handsontable(container, {
   data: newDataset,
@@ -311,7 +327,7 @@ To replace the entire data in an already-initialized Handsontable instance, you 
   hot.updateData(newDataset);
   ```
 - [`updateSettings()`](@/api/core.md#updatesettings)<br>
-  Used to update the configuration of the table, [`updateSettings()`](@/api/core.md#updatesettings) can be also used to replace the data being used. Since version `12.0.0`, under the hood it utilizes the [`updateData()`](@/api/core.md#updatedata) method to perform the data replacement (apart from the one automatic call done during the initialization, where it uses [`loadData()`](@/api/core.md#loaddata)).
+  Updates the configuration of the table, [`updateSettings()`](@/api/core.md#updatesettings) can be also used to replace the data being used. Since version `12.0.0`, under the hood it utilizes the [`updateData()`](@/api/core.md#updatedata) method to perform the data replacement (apart from the one automatic call done during the initialization, where it uses [`loadData()`](@/api/core.md#loaddata)).
   ```js
   hot.updateSettings({
     data: newDataset,
@@ -323,7 +339,7 @@ To replace the entire data in an already-initialized Handsontable instance, you 
 To modify just a subset of data passed to Handsontable, these are the methods you might want to check out:
 
 - [`setDataAtCell()`](@/api/core.md#setdataatcell)<br>
-  Used to replace data in a single cell or to perform a series of single-cell data replacements:
+  Replaces data in a single cell or to perform a series of single-cell data replacements:
   ```js
   // Replaces the cell contents at the (0, 2) visual coordinates (0 being the visual row index, 2 - the visual column index) with the supplied value.
   hot.setDataAtCell(0, 2, 'New Value');
@@ -338,7 +354,7 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
   ```
 
 - [`setDataAtRowProp()`](@/api/core.md#setdataatrowprop)<br>
-  Used to replace data in a single cell or to perform a series of single-cell data replacements, analogously to `setDataAtCell()`, but allows targeting the cells by the visual row index and data row *property*. Useful for the [Array of objects data type](#array-of-objects).
+  Replaces data in a single cell or to perform a series of single-cell data replacements, analogously to `setDataAtCell()`, but allows targeting the cells by the visual row index and data row *property*. Useful for the [Array of objects data type](#array-of-objects).
   ```js
   // Replaces the cell contents at the (0, 'title') coordinates (0 being the visual row index, 'title' - the data row object property) with the supplied value.
   hot.setDataAtRowProp(0, 'title', 'New Value');
@@ -370,7 +386,10 @@ To modify just a subset of data passed to Handsontable, these are the methods yo
   hot.setSourceDataAtCell(changes);
   ```
 - [`populateFromArray()`](@/api/core.md#populatefromarray)<br>
-  Used to replace a chunk of the dataset by provided the start (and optionally end) coordinates and a two-dimensional data array of new values.
+  Replaces a chunk of the dataset by provided the start (and optionally end) coordinates and a two-dimensional data array of new values.
+  ::: tip
+  The [`populateFromArray()`](@/api/core.md#populatefromarray) method can't change [read-only](@/guides/cell-features/disabled-cells.md) cells.
+  :::
   ```js
   const newValues = [
     ['A', 'B', 'C'],
@@ -392,9 +411,9 @@ Handsontable binds to your data source by reference, not by values. We don't cop
 
 To avoid this scenario, copy the data before you pass it to the grid. To change the data from outside Handsontable, you can use our API methods. For example, a change being made will be displayed immediately on the screen after calling the [`setDataAtCell()`](@/api/core.md#setdataatcell) method.
 
-::: example #example9
+::: example #example10
 ```js
-const container = document.getElementById('example9');
+const container = document.getElementById('example10');
 
 const data = [
   ['', 'Tesla', 'Nissan', 'Toyota', 'Honda', 'Mazda', 'Ford'],
@@ -420,9 +439,9 @@ hot.setDataAtCell(0, 1, 'Ford');
 
 When working with a copy of data for Handsontable, it is best practice is to clone the data source before loading it into Handsontable. This can be done with `JSON.parse(JSON.stringify(data))` or another deep-cloning function.
 
-::: example #example10
+::: example #example11
 ```js
-const container = document.getElementById('example10');
+const container = document.getElementById('example11');
 
 const data = [
   ['', 'Tesla', 'Nissan', 'Toyota', 'Honda', 'Mazda', 'Ford'],

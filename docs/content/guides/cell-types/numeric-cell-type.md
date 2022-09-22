@@ -11,23 +11,53 @@ canonicalUrl: /numeric-cell-type
 
 ## Overview
 
-By default, Handsontable treats all cell values as `string` type. This is because the `<textarea>` returns a string as its value. There are many cases where you need cell values to be treated as a `number` type. The numeric cell type allows you to format displayed numbers nicely and sort them correctly.
+The default cell type in Handsontable is text. The data of a text cell is processed as a `string` type that corresponds to the value of the text editor's internal `<textarea>` element. However, there are many cases where you need cell values to be treated as a `number` type. The numeric cell type allows you to format displayed numbers nicely and sort them correctly.
 
 ## Usage
 
-To trigger the Numeric cell type, use the option `type: 'numeric'` in the [`columns`](@/api/options.md#columns) array or [`cells`](@/api/options.md#cells) function.
-
 ::: tip
-Ensure your cell values are numbers and not strings, as Handsontable doesn't parse strings to numbers.
+Ensure your numeric cell values are stored as numbers and not strings in the data source, as Handsontable doesn't parse strings to numbers.
 :::
 
-You can input float-type values in the numeric editor using a dot or a comma as a decimal separator. For example, both `500000.5`, `500000,5` will be accepted. You are not able to use a thousands separator in the editor.
+To use the `numeric` cell type, set the [`type`](@/api/options.md#type) option to `'numeric'`:
 
-You can format the displayed values of the entered numbers using the [`numericFormat`](@/api/options.md#numericformat) option. Note that it ** does not influence the way you enter data**.
+```js
+// set the `numeric` cell type for each cell of the entire grid
+type: `'numeric'`,
+
+// set the `numeric` cell type for each cell of a single column
+columns: [
+  {
+    type: 'numeric',
+  },
+]
+
+// set the `numeric` cell type for a single cell
+cell: [
+  {
+    row: 0,
+    col: 0,
+    type: 'numeric',
+  }
+],
+```
+
+### Numeric values in the editor
+
+In the cell editor of a `numeric` cell:
+- The number is initially presented with a dot (`50.5`) as the decimal separator and without the thousands separator.
+- A dot (`50.5`) or a comma (`50,5`) can be entered as the decimal separator.
+- No character can be used as the thousands separator.
 
 ::: tip
 All the positive and negative integers whose magnitude is no greater than 253 (+/- 9007199254740991) are representable in the `Number` type, i.e., safe integer. Any calculations that are performed on bigger numbers won't be calculated precisely due to JavaScript limitations.
 :::
+
+### Numeric values in the renderer
+
+To format the look of numeric values in cell renderers, use the [`numericFormat`](@/api/options.md#numericformat) option.
+
+Note that the [`numericFormat`](@/api/options.md#numericformat) option doesn't change the way numbers are presented or parsed by the [cell editor](#numeric-values-in-the-editor).
 
 ## Basic example
 
