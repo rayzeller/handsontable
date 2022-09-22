@@ -18,7 +18,7 @@ editLink: false
 
 ### close
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L408
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L408
 
 :::
 
@@ -35,7 +35,7 @@ Close menu.
 
 ### closeAllSubMenus
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L482
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L482
 
 :::
 
@@ -47,7 +47,7 @@ Close all opened sub menus.
 
 ### closeSubMenu
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L469
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L469
 
 :::
 
@@ -64,7 +64,7 @@ Close sub menu at row index.
 
 ### destroy
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L498
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L498
 
 :::
 
@@ -76,13 +76,17 @@ Destroy instance.
 
 ### executeCommand
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L525
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L529
 
 :::
 
 _menu.executeCommand([event])_
 
 Execute menu command.
+
+The `executeCommand()` method works only for selected cells.
+
+When no cells are selected, `executeCommand()` doesn't do anything.
 
 
 | Param | Type | Description |
@@ -93,7 +97,7 @@ Execute menu command.
 
 ### getSelectedItem
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L117
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L117
 
 :::
 
@@ -105,7 +109,7 @@ Returns currently selected menu item. Returns `null` if no item was selected.
 
 ### hasSelectedItem
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L126
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L126
 
 :::
 
@@ -117,7 +121,7 @@ Checks if the menu has selected (highlighted) any item from the menu list.
 
 ### isAllSubMenusClosed
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L491
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L491
 
 :::
 
@@ -129,7 +133,7 @@ Checks if all created and opened sub menus are closed.
 
 ### isCommandPassive
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L556
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L560
 
 :::
 
@@ -149,7 +153,7 @@ closed automatically after the user trigger the command through the UI.
 
 ### isOpened
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L516
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L516
 
 :::
 
@@ -162,7 +166,7 @@ Checks if menu was opened.
 
 ### isSubMenu
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L145
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L145
 
 :::
 
@@ -174,7 +178,7 @@ Check if menu is using as sub-menu.
 
 ### onAfterSelection
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L918
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L922
 
 :::
 
@@ -195,7 +199,7 @@ On after selection listener.
 
 ### open
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L155
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L155
 
 :::
 
@@ -208,7 +212,7 @@ Open menu.
 
 ### openSubMenu
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L436
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L436
 
 :::
 
@@ -226,7 +230,7 @@ Open sub menu at the provided row index.
 
 ### selectFirstCell
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L689
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L693
 
 :::
 
@@ -238,7 +242,7 @@ Select first cell in opened menu.
 
 ### selectLastCell
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L702
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L706
 
 :::
 
@@ -250,7 +254,7 @@ Select last cell in opened menu.
 
 ### selectNextCell
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L722
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L726
 
 :::
 
@@ -268,7 +272,7 @@ Select next cell in opened menu.
 
 ### selectPrevCell
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L742
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L746
 
 :::
 
@@ -286,7 +290,7 @@ Select previous cell in opened menu.
 
 ### setHorizontalPositionForLtr
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L612
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L616
 
 :::
 
@@ -303,7 +307,7 @@ Set menu horizontal position for LTR mode.
 
 ### setHorizontalPositionForRtl
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L599
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L603
 
 :::
 
@@ -320,7 +324,7 @@ Set menu horizontal position for RTL mode.
 
 ### setMenuItems
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L108
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L108
 
 :::
 
@@ -337,7 +341,7 @@ Set array of objects which defines menu items.
 
 ### setOffset
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L136
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L136
 
 :::
 
@@ -355,7 +359,7 @@ Set offset menu position for specified area (`above`, `below`, `left` or `right`
 
 ### setPosition
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L569
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L573
 
 :::
 
@@ -372,7 +376,7 @@ Set menu position based on dom event or based on literal object.
 
 ### setPositionAboveCursor
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L625
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L629
 
 :::
 
@@ -389,7 +393,7 @@ Set menu position above cursor object.
 
 ### setPositionBelowCursor
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L639
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L643
 
 :::
 
@@ -406,7 +410,7 @@ Set menu position below cursor object.
 
 ### setPositionOnLeftOfCursor
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L673
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L677
 
 :::
 
@@ -423,7 +427,7 @@ Set menu position on the left of cursor object.
 
 ### setPositionOnRightOfCursor
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/menu.js#L653
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/contextMenu/menu.js#L657
 
 :::
 

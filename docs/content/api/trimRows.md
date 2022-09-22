@@ -55,7 +55,7 @@ hot.render();
 
 ### trimRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4231
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4262
 
 :::
 
@@ -65,11 +65,11 @@ The `trimRows` option configures the [`TrimRows`](@/api/trimRows.md) plugin.
 
 You can set the `trimRows` option to one of the following:
 
-| Setting  | Description                                                                                   |
-| -------- | --------------------------------------------------------------------------------------------- |
-| `false`  | Disable the [`TrimRows`](@/api/trimRows.md) plugin                                            |
-| `true`   | Enable the [`TrimRows`](@/api/trimRows.md) plugin                                             |
-| An array | - Enable the [`TrimRows`](@/api/trimRows.md) plugin<br>- Trim selected rows at initialization |
+| Setting                          | Description                                                                                   |
+| -------------------------------- | --------------------------------------------------------------------------------------------- |
+| `false`                          | Disable the [`TrimRows`](@/api/trimRows.md) plugin                                            |
+| `true`                           | Enable the [`TrimRows`](@/api/trimRows.md) plugin                                             |
+| An array of physical row indexes | - Enable the [`TrimRows`](@/api/trimRows.md) plugin<br>- Trim selected rows at initialization |
 
 Read more:
 - [Plugins: `TrimRows`](@/api/trimRows.md)
@@ -82,7 +82,7 @@ Read more:
 trimRows: true,
 
 // enable the `TrimRows` plugin
-// trim rows 5, 10, and 15 at Handsontable's initialization
+// at Handsontable's initialization, trim rows 5, 10, and 15
 trimRows: [5, 10, 15],
 ```
 
@@ -90,7 +90,7 @@ trimRows: [5, 10, 15],
 
 ### destroy
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L284
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L284
 
 :::
 
@@ -102,7 +102,7 @@ Destroys the plugin instance.
 
 ### disablePlugin
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L121
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L121
 
 :::
 
@@ -114,7 +114,7 @@ Disables the plugin functionality for this Handsontable instance.
 
 ### enablePlugin
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L85
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L85
 
 :::
 
@@ -126,7 +126,7 @@ Enables the plugin functionality for this Handsontable instance.
 
 ### getTrimmedRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L132
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L132
 
 :::
 
@@ -139,7 +139,7 @@ Get list of trimmed rows.
 
 ### isEnabled
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L78
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L78
 
 :::
 
@@ -152,7 +152,7 @@ hook and if it returns `true` than the [AutoRowSize#enablePlugin](@/api/autoRowS
 
 ### isTrimmed
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L240
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L240
 
 :::
 
@@ -169,13 +169,13 @@ Checks if given row is hidden.
 
 ### isValidConfig
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L257
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L257
 
 :::
 
 _trimRows.isValidConfig(trimmedRows) ⇒ boolean_
 
-Get if trim config is valid. Check whether all of the provided row indexes are within source data.
+Get if trim config is valid. Check whether all of the provided physical row indexes are within source data.
 
 
 | Param | Type | Description |
@@ -186,13 +186,13 @@ Get if trim config is valid. Check whether all of the provided row indexes are w
 
 ### trimRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L176
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L176
 
 :::
 
 _trimRows.trimRow(...row)_
 
-Trims the row provided as physical row index (counting from 0).
+Trims the row provided as a physical row index (counting from 0).
 
 
 | Param | Type | Description |
@@ -203,7 +203,7 @@ Trims the row provided as physical row index (counting from 0).
 
 ### trimRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L143
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L143
 
 :::
 
@@ -221,7 +221,7 @@ Trims the rows provided in the array.
 
 ### untrimAll
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L247
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L247
 
 :::
 
@@ -233,13 +233,13 @@ Untrims all trimmed rows.
 
 ### untrimRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L230
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L230
 
 :::
 
 _trimRows.untrimRow(...row)_
 
-Untrims the row provided as row index (counting from 0).
+Untrims the row provided as a physical row index (counting from 0).
 
 
 | Param | Type | Description |
@@ -250,7 +250,7 @@ Untrims the row provided as row index (counting from 0).
 
 ### untrimRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L187
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L187
 
 :::
 
@@ -268,7 +268,7 @@ Untrims the rows provided in the array.
 
 ### updatePlugin
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/trimRows/trimRows.js#L102
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/plugins/trimRows/trimRows.js#L102
 
 :::
 

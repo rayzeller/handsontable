@@ -59,7 +59,7 @@ Read more:
 
 ### activeHeaderClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L84
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L84
 
 :::
 
@@ -92,7 +92,7 @@ activeHeaderClassName: 'ht__active_highlight',
 
 ### allowEmpty
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L120
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L124
 
 :::
 
@@ -105,24 +105,28 @@ The `allowEmpty` option determines whether Handsontable accepts the following va
 
 You can set the `allowEmpty` option to one of the following:
 
-| Setting          | Description                                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `true` (default) | - Accept `null`, `undefined` and `''` values<br>- Mark cells that contain `null`, `undefined` and `''` values as `valid`              |
-| `false`          | - Don't accept `null`, `undefined` and `''` values<br>- Mark cells that contain `null`, `undefined` and `''` values with as `invalid` |
+| Setting          | Description                                                                                                                          |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `true` (default) | - Accept `null`, `undefined` and `''` values<br>- Mark cells that contain `null`, `undefined` or `''` values as `valid`              |
+| `false`          | - Don't accept `null`, `undefined` and `''` values<br>- Mark cells that contain `null`, `undefined` or `''` values with as `invalid` |
+
+::: tip
+To use the [`allowEmpty`](#allowempty) option, you need to set the [`validator`](#validator) option (or the [`type`](#type) option).
+:::
 
 **Default**: <code>true</code>  
 **Category**: [Core](@/api/core.md)  
 **Example**  
 ```js
-// allow empty values in every cell of the entire grid
+// allow empty values in each cell of the entire grid
 allowEmpty: true,
 
 // or
 columns: [
   {
-    data: 'date',
+    type: 'date',
     dateFormat: 'DD/MM/YYYY',
-    // allow empty values in every cell of the 'date' column
+    // allow empty values in each cell of the 'date' column
     allowEmpty: true
   }
 ],
@@ -131,7 +135,7 @@ columns: [
 
 ### allowHtml
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L160
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L164
 
 :::
 
@@ -161,7 +165,7 @@ Read more:
 ```js
 columns: [
   {
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // set options available in every `autocomplete` cell of this column
   source: ['<strong>foo</strong>', '<strong>bar</strong>']
@@ -174,7 +178,7 @@ columns: [
 
 ### allowInsertColumn
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L178
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L182
 
 :::
 
@@ -195,7 +199,7 @@ allowInsertColumn: false,
 
 ### allowInsertRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L196
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L200
 
 :::
 
@@ -216,7 +220,7 @@ allowInsertRow: false,
 
 ### allowInvalid
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L229
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L233
 
 :::
 
@@ -252,7 +256,7 @@ allowInvalid: false,
 
 ### allowRemoveColumn
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L249
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L253
 
 :::
 
@@ -275,7 +279,7 @@ allowRemoveColumn: false,
 
 ### allowRemoveRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L269
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L273
 
 :::
 
@@ -298,7 +302,7 @@ allowRemoveRow: false,
 
 ### autoColumnSize
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L320
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L324
 
 :::
 
@@ -352,7 +356,7 @@ autoColumnSize: {
 
 ### autoRowSize
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L360
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L364
 
 :::
 
@@ -395,7 +399,7 @@ autoRowSize: {
 
 ### autoWrapCol
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L383
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L387
 
 :::
 
@@ -421,7 +425,7 @@ autoWrapCol: true,
 
 ### autoWrapRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L406
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L410
 
 :::
 
@@ -447,7 +451,7 @@ autoWrapRow: true,
 
 ### bindRowsWithHeaders
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L433
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L437
 
 :::
 
@@ -476,7 +480,7 @@ bindRowsWithHeaders: true
 
 ### cell
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L463
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L467
 
 :::
 
@@ -509,13 +513,13 @@ cell: [
 
 ### cells
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L506
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L510
 
 :::
 
 _options.cells : function_
 
-The `cells` option lets you apply [configuration options](@/guides/getting-started/setting-options.md) to
+The `cells` option lets you apply any other [configuration options](@/guides/getting-started/setting-options.md) to
 individual grid elements (columns, rows, cells), based on any logic you implement.
 
 The `cells` option overwrites all other options (including options set by [`columns`](#columns) and [`cell`](#cell)).
@@ -554,7 +558,7 @@ cells(row, column, prop) {
 
 ### checkedTemplate
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L549
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L553
 
 :::
 
@@ -581,13 +585,13 @@ Read more:
 ```js
 columns: [
   {
-    // set the `type` of every cell in this column to `checkbox`
+    // set the `type` of each cell in this column to `checkbox`
     // when checked, the cell's value is `true`
     // when unchecked, the cell's value is `false`
     type: 'checkbox',
   },
   {
-    // set the `type` of every cell in this column to `checkbox`
+    // set the `type` of each cell in this column to `checkbox`
     type: 'checkbox',
     // when checked, the cell's value is `'Yes'`
     checkedTemplate: 'Yes',
@@ -600,7 +604,7 @@ columns: [
 
 ### className
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L592
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L596
 
 :::
 
@@ -646,7 +650,7 @@ className: ['first-class-name', 'second-class-name'],
 
 ### colHeaders
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L628
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L632
 
 :::
 
@@ -685,7 +689,7 @@ colHeaders: function(visualColumnIndex) {
 
 ### collapsibleColumns
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L662
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L666
 
 :::
 
@@ -721,7 +725,7 @@ collapsibleColumns: [
 
 ### columnHeaderHeight
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L689
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L693
 
 :::
 
@@ -750,13 +754,13 @@ columnHeaderHeight: [25, 30, 55],
 
 ### columns
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L742
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L747
 
 :::
 
 _options.columns : Array&lt;object&gt; | function_
 
-The `columns` option lets you apply [configuration options](@/guides/getting-started/setting-options.md) to individual columns (or ranges of columns).
+The `columns` option lets you apply any other [configuration options](@/guides/getting-started/setting-options.md) to individual columns (or ranges of columns).
 
 You can set the `columns` option to one of the following:
 - An array of objects (each object represents one column)
@@ -764,13 +768,14 @@ You can set the `columns` option to one of the following:
 
 The `columns` option overwrites the [top-level grid options](@/guides/getting-started/setting-options.md#setting-grid-options).
 
-When you use the `columns` option, the [`startCols`](#startcols), [`minCols`](#mincols), and [`maxCols`](#maxcols) are ignored.
+When you use `columns`, the [`startCols`](#startcols), [`minCols`](#mincols), and [`maxCols`](#maxcols) options are ignored.
 
 Read more:
 - [Configuration options: Setting column options](@/guides/getting-started/setting-options.md#setting-column-options)
 - [`startCols`](#startcols)
 - [`minCols`](#mincols)
 - [`maxCols`](#maxcols)
+- [`data`](#data)
 
 **Default**: <code>undefined</code>  
 **Category**: [Core](@/api/core.md)  
@@ -805,7 +810,7 @@ columns(index) {
 
 ### columnSorting
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L822
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L827
 
 :::
 
@@ -887,7 +892,7 @@ columnSorting: {
 
 ### columnSummary
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L877
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L882
 
 :::
 
@@ -944,7 +949,7 @@ columnSummary: [
 
 ### colWidths
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L925
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L930
 
 :::
 
@@ -995,7 +1000,7 @@ colWidths(visualColumnIndex) {
 
 ### commentedCellClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L957
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L962
 
 :::
 
@@ -1023,14 +1028,14 @@ Read more:
 **Example**  
 ```js
 // add a `has-comment` CSS class name
-// to every cell that has a comment
+// to each cell that has a comment
 commentedCellClassName: 'has-comment',
 ```
 
 
 ### comments
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1012
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1017
 
 :::
 
@@ -1087,7 +1092,7 @@ comments: {
 
 ### contextMenu
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1075
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1080
 
 :::
 
@@ -1152,7 +1157,7 @@ contextMenu: {
 
 ### copyable
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1126
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1131
 
 :::
 
@@ -1162,10 +1167,10 @@ The `copyable` option determines whether a cell's value can be copied to the cli
 
 You can set the `copyable` option to one of the following:
 
-| Setting                                                                                                        | Description                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `true` (default)                                                                                               | - Enable copying for this cell<br>- On pressing <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd> + <kbd>**C**</kbd>, add the cell's value to the clipboard |
-| `false`<br>(default for the [`password`](@/guides/cell-types/password-cell-type.md) [cell type](#type))        | - Disable copying for this cell                                                                                                    |
+| Setting                                                                                                        | Description                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `true` (default)                                                                                               | - On pressing <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd> + <kbd>**C**</kbd>, add the cell's value to the clipboard         |
+| `false`<br>(default for the [`password`](@/guides/cell-types/password-cell-type.md) [cell type](#type))        | - On pressing <kbd>**Ctrl**</kbd>/<kbd>**Cmd**</kbd> + <kbd>**C**</kbd>, add an empty string (`""`) to the clipboard   |
 
 Read more:
 - [Clipboard](@/guides/cell-features/clipboard.md)
@@ -1176,17 +1181,17 @@ Read more:
 **Category**: [Core](@/api/core.md)  
 **Example**  
 ```js
-// enable copying for every cell of the entire grid
+// enable copying for each cell of the entire grid
 copyable: true,
 
 // enable copying for individual columns
 columns: [
   {
-    // enable copying for every cell of this column
+    // enable copying for each cell of this column
     copyable: true
   },
   {
-    // disable copying for every cell of this column
+    // disable copying for each cell of this column
     copyable: false
   }
 ]
@@ -1205,7 +1210,7 @@ cells: [
 
 ### copyPaste
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1175
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1180
 
 :::
 
@@ -1257,21 +1262,27 @@ copyPaste: {
 
 ### correctFormat
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1208
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1228
 
 :::
 
 _options.correctFormat : boolean_
 
-The `correctFormat` option configures what happens when the format of a date entered into a [`date`](@/guides/cell-types/date-cell-type.md) cell doesn't match the format specified by the [`dateFormat`](#dateformat) option:
+The `correctFormat` option configures whether incorrectly-formatted times and dates are amended or not.
 
-| Setting           | Description                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------- |
-| `false` (default) | Don't correct the entered date's format (treat the entered date as invalid)        |
-| `true`            | Correct the entered date's format to match the [`dateFormat`](#dateformat) setting |
+When the user enters dates and times, Handsontable can automatically adjust their format
+to match the [`dateFormat`](#dateformat) and [`timeFormat`](@/guides/cell-types/time-cell-type.md) settings.
+
+You can set the `correctFormat` option to one of the following:
+
+| Setting           | Description                                                                                                                                               |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `false` (default) | Don't correct the format of the entered date or time (treat the entered date or time as invalid)                                                          |
+| `true`            | Correct the format of the entered date or time to match the [`dateFormat`](#dateformat) or [`timeFormat`](@/guides/cell-types/time-cell-type.md) settings |
 
 Read more:
 - [Date cell type](@/guides/cell-types/date-cell-type.md)
+- [Time cell type](@/guides/cell-types/time-cell-type.md)
 - [`dateFormat`](#dateformat)
 
 **Default**: <code>false</code>  
@@ -1280,11 +1291,20 @@ Read more:
 ```js
 columns: [
   {
-  // set the `type` of every cell in this column to `date`
+  // set the `type` of each cell in this column to `date`
   type: 'date',
   // for every `date` cell of this column, set the date format to `YYYY-MM-DD`
   dateFormat: 'YYYY-MM-DD',
   // enforce the `YYYY-MM-DD` date format
+  correctFormat: true
+  },
+
+  {
+  // set the `type` of each cell in this column to `time`
+  type: 'time',
+  // for every `time` cell of this column, set the time format to `h:mm:ss a`
+  timeFormat: 'h:mm:ss a',
+  // enforce the `h:mm:ss a` time format
   correctFormat: true
   },
 ],
@@ -1293,14 +1313,14 @@ columns: [
 
 ### currentColClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1238
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1258
 
 :::
 
 _options.currentColClassName : string_
 
 The `currentColClassName` option lets you add a CSS class name
-to every cell of the currently-visible, currently-selected columns.
+to each cell of the currently-visible, currently-selected columns.
 
 Read more:
 - [`currentRowClassName`](#currentrowclassname)
@@ -1319,14 +1339,14 @@ Read more:
 **Example**  
 ```js
 // add a `your-class-name` CSS class name
-// to every cell of the currently-visible, currently-selected columns
+// to each cell of the currently-visible, currently-selected columns
 currentColClassName: 'your-class-name',
 ```
 
 
 ### currentHeaderClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1267
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1287
 
 :::
 
@@ -1358,14 +1378,14 @@ currentHeaderClassName: 'ht__highlight',
 
 ### currentRowClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1297
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1317
 
 :::
 
 _options.currentRowClassName : string_
 
 The `currentRowClassName` option lets you add a CSS class name
-to every cell of the currently-visible, currently-selected rows.
+to each cell of the currently-visible, currently-selected rows.
 
 Read more:
 - [`currentColClassName`](#currentcolclassname)
@@ -1384,14 +1404,14 @@ Read more:
 **Example**  
 ```js
 // add a `your-class-name` CSS class name
-// to every cell of the currently-visible, currently-selected rows
+// to each cell of the currently-visible, currently-selected rows
 currentRowClassName: 'your-class-name',
 ```
 
 
 ### customBorders
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1410
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1430
 
 :::
 
@@ -1506,7 +1526,7 @@ customBorders: [
 
 ### data
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1450
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1474
 
 :::
 
@@ -1520,9 +1540,13 @@ You can set the `data` option:
 - Either to an [array of arrays](@/guides/getting-started/binding-to-data.md#array-of-arrays).
 - Or to an [array of objects](@/guides/getting-started/binding-to-data.md#array-of-objects).
 
+If you don't set the `data` option (or set it to `null`), Handsontable renders as an empty 5x5 grid by default.
+
 Read more:
 - [Binding to data](@/guides/getting-started/binding-to-data.md)
 - [`dataSchema`](#dataschema)
+- [`startRows`](#startrows)
+- [`startCols`](#startcols)
 
 **Default**: <code>undefined</code>  
 **Category**: [Core](@/api/core.md)  
@@ -1548,17 +1572,24 @@ data: [
 
 ### dataSchema
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1482
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1513
 
 :::
 
-_options.dataSchema : object_
+_options.dataSchema : object | function_
 
-If the [`data`](#data) option is set to an [array of objects](@/guides/getting-started/binding-to-data.md#array-of-objects)
+When the [`data`](#data) option is set to an [array of objects](@/guides/getting-started/binding-to-data.md#array-of-objects)
 (or is empty), the `dataSchema` option defines the structure of new rows.
+
+Using the `dataSchema` option, you can start out with an empty grid.
+
+You can set the `dataSchema` option to one of the following:
+- An object
+- A function
 
 Read more:
 - [Binding to data: Array of objects with custom data schema](@/guides/getting-started/binding-to-data.md#array-of-objects-with-custom-data-schema)
+- [Binding to data: Function data source and schema](@/guides/getting-started/binding-to-data.md#function-data-source-and-schema)
 - [`data`](#data)
 
 **Default**: <code>undefined</code>  
@@ -1582,7 +1613,7 @@ minSpareRows: 1
 
 ### dateFormat
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1513
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1544
 
 :::
 
@@ -1605,7 +1636,7 @@ Read more:
 ```js
 columns: [
   {
-  // set the `type` of every cell in this column to `date`
+  // set the `type` of each cell in this column to `date`
   type: 'date',
   // for every `date` cell of this column, set the date format to `YYYY-MM-DD`
   dateFormat: 'YYYY-MM-DD',
@@ -1616,22 +1647,22 @@ columns: [
 
 ### datePickerConfig
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1543
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1574
 
 :::
 
 _options.datePickerConfig : object_
 
-The `datePickerConfig` option configures the `date` [cell editor](@/guides/cell-functions/cell-editor.md)'s date picker, which uses an external dependency: [Pikaday](https://github.com/Pikaday/Pikaday/tree/1.8.0).
+The `datePickerConfig` option configures the `date` [cell editor](@/guides/cell-functions/cell-editor.md)'s date picker, which uses an external dependency: [Pikaday](https://github.com/Pikaday/Pikaday/tree/1.8.2).
 
-You can set the `datePickerConfig` option to an object with any of the available [Pikaday options](https://github.com/Pikaday/Pikaday/tree/1.8.0#configuration),
+You can set the `datePickerConfig` option to an object with any of the available [Pikaday options](https://github.com/Pikaday/Pikaday/tree/1.8.2#configuration),
 except for the following, which are always overwritten by the `date` [cell editor](@/guides/cell-functions/cell-editor.md):
 - `bound`
 - `container`
 - `field`
 - `trigger`
 
-If the `datePickerConfig` option is not defined, the `date` [cell editor](@/guides/cell-functions/cell-editor.md) overwrites the following [Pikaday options](https://github.com/Pikaday/Pikaday/tree/1.8.0#configuration) as well:
+If the `datePickerConfig` option is not defined, the `date` [cell editor](@/guides/cell-functions/cell-editor.md) overwrites the following [Pikaday options](https://github.com/Pikaday/Pikaday/tree/1.8.2#configuration) as well:
 
 | Pikaday option       | Handsontable's setting |
 | -------------------- | ---------------------- |
@@ -1642,7 +1673,7 @@ Read more:
 - [`editor`](#editor)
 - [`dateFormat`](#dateformat)
 - [Cell editor](@/guides/cell-functions/cell-editor.md)
-- [All Pikaday options &#8594;](https://github.com/Pikaday/Pikaday/tree/1.8.0#configuration)
+- [All Pikaday options &#8594;](https://github.com/Pikaday/Pikaday/tree/1.8.2#configuration)
 
 **Default**: <code>undefined</code>  
 **Category**: [Core](@/api/core.md)  
@@ -1650,7 +1681,7 @@ Read more:
 
 ### defaultDate
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1572
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1603
 
 :::
 
@@ -1671,7 +1702,7 @@ Read more:
 ```js
 columns: [
   {
-    // set the `type` of every cell in this column to `date`
+    // set the `type` of each cell in this column to `date`
     type: 'date',
     // in every empty `date` cell of this column, display `2015-02-02`
     defaultDate: '2015-02-02'
@@ -1682,7 +1713,7 @@ columns: [
 
 ### disableVisualSelection
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1616
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1647
 
 :::
 
@@ -1728,7 +1759,7 @@ disableVisualSelection: ['current', 'area'],
 
 ### dragToScroll
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1643
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1674
 
 :::
 
@@ -1757,7 +1788,7 @@ dragToScroll: true,
 
 ### dropdownMenu
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1702
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1733
 
 :::
 
@@ -1819,7 +1850,7 @@ dropdownMenu: {
 
 ### editor
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1761
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1792
 
 :::
 
@@ -1862,17 +1893,17 @@ Read more:
 **Category**: [Core](@/api/core.md)  
 **Example**  
 ```js
-// use the `numeric` editor for every cell of the entire grid
+// use the `numeric` editor for each cell of the entire grid
 editor: 'numeric',
 
 // apply the `editor` option to individual columns
 columns: [
   {
-    // use the `autocomplete` editor for every cell of this column
+    // use the `autocomplete` editor for each cell of this column
     editor: 'autocomplete'
   },
   {
-    // disable editing cells through cell editors for every cell of this column
+    // disable editing cells through cell editors for each cell of this column
     editor: false
   }
 ]
@@ -1881,7 +1912,7 @@ columns: [
 
 ### enterBeginsEditing
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1791
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1822
 
 :::
 
@@ -1914,7 +1945,7 @@ enterBeginsEditing: false,
 
 ### enterMoves
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1832
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1863
 
 :::
 
@@ -1958,7 +1989,7 @@ enterMoves(event) {
 
 ### fillHandle
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1890
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1921
 
 :::
 
@@ -2019,7 +2050,7 @@ fillHandle: {
 
 ### filter
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1929
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1960
 
 :::
 
@@ -2045,7 +2076,7 @@ Read more:
 **Example**  
 ```js
 columns: [{
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // set options available in every `autocomplete` cell of this column
   source: ['A', 'B', 'C'],
@@ -2059,7 +2090,7 @@ columns: [{
 
 ### filteringCaseSensitive
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1964
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L1995
 
 :::
 
@@ -2097,7 +2128,7 @@ columns: [
 
 ### filters
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1992
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2023
 
 :::
 
@@ -2128,7 +2159,7 @@ filters: true,
 
 ### fixedColumnsLeft
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2017
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2048
 
 :::
 
@@ -2156,7 +2187,7 @@ fixedColumnsLeft: 3,
 
 ### fixedColumnsStart
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2056
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2087
 
 :::
 
@@ -2198,7 +2229,7 @@ fixedColumnsStart: 3,
 
 ### fixedRowsBottom
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2076
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2107
 
 :::
 
@@ -2221,7 +2252,7 @@ fixedRowsBottom: 3,
 
 ### fixedRowsTop
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2095
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2126
 
 :::
 
@@ -2243,7 +2274,7 @@ fixedRowsTop: 3,
 
 ### formulas
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2175
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2206
 
 :::
 
@@ -2326,7 +2357,7 @@ formulas: {
 
 ### fragmentSelection
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2202
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2233
 
 :::
 
@@ -2356,7 +2387,7 @@ fragmentSelection: 'cell',
 
 ### height
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2237
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2268
 
 :::
 
@@ -2394,7 +2425,7 @@ height() {
 
 ### hiddenColumns
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2283
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2314
 
 :::
 
@@ -2443,7 +2474,7 @@ hiddenColumns: {
 
 ### hiddenRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2329
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2360
 
 :::
 
@@ -2492,7 +2523,7 @@ hiddenRows: {
 
 ### invalidCellClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2359
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2390
 
 :::
 
@@ -2525,7 +2556,7 @@ invalidCellClassName: 'highlight-error',
 
 ### label
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2472
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2503
 
 :::
 
@@ -2559,7 +2590,7 @@ columns: [{
 
 ### language
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2517
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2548
 
 :::
 
@@ -2607,7 +2638,7 @@ language: 'pl-PL',
 
 ### layoutDirection
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2563
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2594
 
 :::
 
@@ -2656,7 +2687,7 @@ layoutDirection: 'ltr',
 
 ### licenseKey
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2592
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2623
 
 :::
 
@@ -2688,7 +2719,7 @@ licenseKey: 'non-commercial-and-evaluation',
 
 ### locale
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2629
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2660
 
 :::
 
@@ -2728,7 +2759,7 @@ columns: [
 
 ### manualColumnFreeze
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2655
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2686
 
 :::
 
@@ -2757,7 +2788,7 @@ manualColumnFreeze: true,
 
 ### manualColumnMove
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2688
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2719
 
 :::
 
@@ -2793,7 +2824,7 @@ manualColumnMove: [1, 4, 6],
 
 ### manualColumnResize
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2722
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2753
 
 :::
 
@@ -2829,7 +2860,7 @@ manualColumnResize: [40, 50, 60],
 
 ### manualRowMove
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2756
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2787
 
 :::
 
@@ -2865,7 +2896,7 @@ manualColumnMove: [1, 4, 6],
 
 ### manualRowResize
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2790
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2821
 
 :::
 
@@ -2901,7 +2932,7 @@ manualColumnResize: [40, 50, 60],
 
 ### maxCols
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2811
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2842
 
 :::
 
@@ -2925,7 +2956,7 @@ maxCols: 300,
 
 ### maxRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2832
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2863
 
 :::
 
@@ -2949,7 +2980,7 @@ maxRows: 300,
 
 ### mergeCells
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2881
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2912
 
 :::
 
@@ -3000,7 +3031,7 @@ mergeCells: [
 
 ### minCols
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2909
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2940
 
 :::
 
@@ -3031,7 +3062,7 @@ minCols: 10,
 
 ### minRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2930
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2961
 
 :::
 
@@ -3055,7 +3086,7 @@ minRows: 10,
 
 ### minSpareCols
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2959
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2990
 
 :::
 
@@ -3087,7 +3118,7 @@ minSpareCols: 3,
 
 ### minSpareRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2981
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3012
 
 :::
 
@@ -3112,7 +3143,7 @@ minSpareRows: 3,
 
 ### multiColumnSorting
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3060
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3091
 
 :::
 
@@ -3193,7 +3224,7 @@ multiColumnSorting: {
 
 ### nestedHeaders
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3093
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3124
 
 :::
 
@@ -3228,7 +3259,7 @@ nestedHeaders: [
 
 ### nestedRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3120
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3151
 
 :::
 
@@ -3257,14 +3288,14 @@ nestedRows: true,
 
 ### noWordWrapClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3150
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3181
 
 :::
 
 _options.noWordWrapClassName : string_
 
 The `noWordWrapClassName` option lets you add a CSS class name
-to every cell that has the [`wordWrap`](#wordwrap) option set to `false`.
+to each cell that has the [`wordWrap`](#wordwrap) option set to `false`.
 
 Read more:
 - [`wordWrap`](#wordwrap)
@@ -3283,21 +3314,22 @@ Read more:
 **Example**  
 ```js
 // add an `is-noWrapCell` CSS class name
-// to every cell that doesn't wrap content
+// to each cell that doesn't wrap content
 noWordWrapClassName: 'is-noWrapCell',
 ```
 
 
 ### numericFormat
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3197
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3226
 
 :::
 
 _options.numericFormat : object_
 
 The `numericFormat` option configures the number format and the currency format
-of [`numeric`](@/guides/cell-types/numeric-cell-type.md) cells` displayed output.
+of [`numeric`](@/guides/cell-types/numeric-cell-type.md) cells` displayed output
+in the numeric cell renderer.
 
 You can set the `numericFormat` option to an object with the following properties:
 
@@ -3306,10 +3338,7 @@ You can set the `numericFormat` option to an object with the following propertie
 | `pattern`   | All [`numbro.js` number formats](https://numbrojs.com/format.html#numbers)    | Number format   |
 | `culture`   | All [`numbro.js` currency formats](https://numbrojs.com/format.html#currency) | Currency format |
 
-The `numericFormat` option as no effect on cells' input data.
-To enter numeric data into Handsontable, use:
-- Either floats (separated by a dot, or a comma)
-- Or integers
+The `numericFormat` option as no effect on the numeric cell editor.
 
 In the source data, numeric data is stored as JavaScript numbers.
 
@@ -3324,7 +3353,7 @@ Read more:
 ```js
 columns: [
   {
-    // set the `type` of every cell in this column to `numeric`
+    // set the `type` of each cell in this column to `numeric`
     type: 'numeric',
     // set the `numericFormat` option for every `numeric` cell of this column
     numericFormat: {
@@ -3340,7 +3369,7 @@ columns: [
 
 ### observeDOMVisibility
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3214
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3243
 
 :::
 
@@ -3360,7 +3389,7 @@ observeDOMVisibility: false,
 
 ### outsideClickDeselects
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3252
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3281
 
 :::
 
@@ -3401,7 +3430,7 @@ outsideClickDeselects(event) {
 
 ### persistentState
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3280
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3309
 
 :::
 
@@ -3431,7 +3460,7 @@ persistentState: true,
 
 ### placeholder
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3318
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3347
 
 :::
 
@@ -3472,7 +3501,7 @@ columns: [
 
 ### placeholderCellClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3349
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3378
 
 :::
 
@@ -3499,14 +3528,14 @@ Read more:
 **Example**  
 ```js
 // add a `has-placeholder` CSS class name
-// to every cell that contains `placeholder` text
+// to each cell that contains `placeholder` text
 placeholderCellClassName: 'has-placeholder',
 ```
 
 
 ### preventOverflow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3374
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3403
 
 :::
 
@@ -3534,7 +3563,7 @@ preventOverflow: 'horizontal',
 
 ### readOnly
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3426
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3457
 
 :::
 
@@ -3548,6 +3577,8 @@ You can set the `readOnly` option to one of the following:
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `false` (default) | Set as editable                                                                                                           |
 | `true`            | - Set as read-only<br>- Add the [`readOnlyCellClassName`](#readonlycellclassname) CSS class name (by default: `htDimmed`) |
+
+`readOnly` cells can't be changed by the [`populateFromArray()`](@/api/core.md#populatefromarray) method.
 
 Read more:
 - [Configuration options: Cascading configuration](@/guides/getting-started/setting-options.md#cascading-configuration)
@@ -3563,7 +3594,7 @@ readOnly: true,
 
 ### readOnlyCellClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3455
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3486
 
 :::
 
@@ -3595,7 +3626,7 @@ readOnlyCellClassName: 'is-readOnly',
 
 ### renderAllRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3481
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3512
 
 :::
 
@@ -3624,7 +3655,7 @@ renderAllRows: true,
 
 ### renderer
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3543
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3574
 
 :::
 
@@ -3663,7 +3694,7 @@ Read more:
 **Category**: [Core](@/api/core.md)  
 **Example**  
 ```js
-// use the `numeric` renderer for every cell of the entire grid
+// use the `numeric` renderer for each cell of the entire grid
 renderer: `'numeric'`,
 
 // add a custom renderer function
@@ -3675,11 +3706,11 @@ renderer(hotInstance, td, row, column, prop, value, cellProperties) {
 // apply the `renderer` option to individual columns
 columns: [
   {
-    // use the `autocomplete` renderer for every cell of this column
+    // use the `autocomplete` renderer for each cell of this column
     renderer: 'autocomplete'
   },
   {
-    // use the `myCustomRenderer` renderer for every cell of this column
+    // use the `myCustomRenderer` renderer for each cell of this column
     renderer: 'myCustomRenderer'
   }
 ]
@@ -3688,7 +3719,7 @@ columns: [
 
 ### rowHeaders
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3579
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3610
 
 :::
 
@@ -3727,7 +3758,7 @@ rowHeaders: function(visualRowIndex) {
 
 ### rowHeaderWidth
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3606
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3637
 
 :::
 
@@ -3756,7 +3787,7 @@ rowHeaderWidth: [25, 30, 55],
 
 ### rowHeights
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3653
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3684
 
 :::
 
@@ -3806,7 +3837,7 @@ rowHeights(visualRowIndex) {
 
 ### search
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3705
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3736
 
 :::
 
@@ -3860,7 +3891,7 @@ search: {
 
 ### selectionMode
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3739
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3770
 
 :::
 
@@ -3896,7 +3927,7 @@ selectionMode: 'multiple',
 
 ### selectOptions
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3797
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3828
 
 :::
 
@@ -3921,7 +3952,7 @@ Read more:
 ```js
 columns: [
   {
-    // set the `type` of every cell in this column to `select`
+    // set the `type` of each cell in this column to `select`
     type: 'select',
     // set the first option's value and label to `A`
     // set the second option's value and label to `B`
@@ -3929,7 +3960,7 @@ columns: [
     selectOptions: ['A', 'B', 'C'],
   },
   {
-    // set the `type` of every cell in this column to `select`
+    // set the `type` of each cell in this column to `select`
     type: 'select',
     selectOptions: {
       // set the first option's value to `value1` and label to `Label 1`
@@ -3941,7 +3972,7 @@ columns: [
     },
   },
   {
-    // set the `type` of every cell in this column to `select`
+    // set the `type` of each cell in this column to `select`
     type: 'select',
     // set `selectOption` to a function that returns available options as an object
     selectOptions(visualRow, visualColumn, prop) {
@@ -3957,7 +3988,7 @@ columns: [
 
 ### skipColumnOnPaste
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3830
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3861
 
 :::
 
@@ -3992,7 +4023,7 @@ columns: [
 
 ### skipRowOnPaste
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3868
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3899
 
 :::
 
@@ -4031,7 +4062,7 @@ cells(row, column) {
 
 ### sortByRelevance
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3902
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3933
 
 :::
 
@@ -4056,7 +4087,7 @@ Read more:
 **Example**  
 ```js
 columns: [{
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // set options available in every `autocomplete` cell of this column
   source: ['D', 'C', 'B', 'A'],
@@ -4068,7 +4099,7 @@ columns: [{
 
 ### source
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3949
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3980
 
 :::
 
@@ -4096,7 +4127,7 @@ Read more:
 ```js
 // set `source` to an array
 columns: [{
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // set options available in every `autocomplete` cell of this column
   source: ['A', 'B', 'C', 'D']
@@ -4104,7 +4135,7 @@ columns: [{
 
 // set `source` to a function
 columns: [{
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // for every `autocomplete` cell in this column, fetch data from an external source
   source(query, callback) {
@@ -4118,7 +4149,7 @@ columns: [{
 
 ### startCols
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3968
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L3999
 
 :::
 
@@ -4139,7 +4170,7 @@ startCols: 15,
 
 ### startRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3987
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4018
 
 :::
 
@@ -4160,7 +4191,7 @@ startRows: 15,
 
 ### stretchH
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4017
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4048
 
 :::
 
@@ -4192,7 +4223,7 @@ stretchH: 'all',
 
 ### strict
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4052
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4083
 
 :::
 
@@ -4217,7 +4248,7 @@ Read more:
 ```js
 columns: [
   {
-  // set the `type` of every cell in this column to `autocomplete`
+  // set the `type` of each cell in this column to `autocomplete`
   type: 'autocomplete',
   // set options available in every `autocomplete` cell of this column
   source: ['A', 'B', 'C'],
@@ -4230,7 +4261,7 @@ columns: [
 
 ### tableClassName
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4093
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4124
 
 :::
 
@@ -4274,7 +4305,7 @@ tableClassName: ['first-class-name', 'second-class-name'],
 
 ### tabMoves
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4125
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4156
 
 :::
 
@@ -4309,7 +4340,7 @@ tabMoves(event) {
 
 ### title
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4158
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4189
 
 :::
 
@@ -4344,7 +4375,7 @@ columns: [
 
 ### trimDropdown
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4198
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4229
 
 :::
 
@@ -4371,13 +4402,13 @@ Read more:
 columns: [
   {
     type: 'autocomplete',
-    // for every cell of this column
+    // for each cell of this column
     // make the `autocomplete` list's width the same as the edited cell's width
     trimDropdown: true,
   },
   {
     type: 'dropdown',
-    // for every cell of this column
+    // for each cell of this column
     // scale the `dropdown` list's width to the list's content
     trimDropdown: false,
   }
@@ -4387,7 +4418,7 @@ columns: [
 
 ### trimRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4231
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4262
 
 :::
 
@@ -4397,11 +4428,11 @@ The `trimRows` option configures the [`TrimRows`](@/api/trimRows.md) plugin.
 
 You can set the `trimRows` option to one of the following:
 
-| Setting  | Description                                                                                   |
-| -------- | --------------------------------------------------------------------------------------------- |
-| `false`  | Disable the [`TrimRows`](@/api/trimRows.md) plugin                                            |
-| `true`   | Enable the [`TrimRows`](@/api/trimRows.md) plugin                                             |
-| An array | - Enable the [`TrimRows`](@/api/trimRows.md) plugin<br>- Trim selected rows at initialization |
+| Setting                          | Description                                                                                   |
+| -------------------------------- | --------------------------------------------------------------------------------------------- |
+| `false`                          | Disable the [`TrimRows`](@/api/trimRows.md) plugin                                            |
+| `true`                           | Enable the [`TrimRows`](@/api/trimRows.md) plugin                                             |
+| An array of physical row indexes | - Enable the [`TrimRows`](@/api/trimRows.md) plugin<br>- Trim selected rows at initialization |
 
 Read more:
 - [Plugins: `TrimRows`](@/api/trimRows.md)
@@ -4415,14 +4446,46 @@ Read more:
 trimRows: true,
 
 // enable the `TrimRows` plugin
-// trim rows 5, 10, and 15 at Handsontable's initialization
+// at Handsontable's initialization, trim rows 5, 10, and 15
 trimRows: [5, 10, 15],
+```
+
+
+### trimWhitespace
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4291
+
+:::
+
+_options.trimWhitespace : boolean_
+
+The `trimWhitespace` option configures automatic whitespace removal. This option
+affects the cell renderer and the cell editor.
+
+You can set the `trimWhitespace` option to one of the following:
+
+| Setting          | Description                                                     |
+| ---------------- | --------------------------------------------------------------- |
+| `true` (default) | Remove whitespace at the beginning and at the end of each cell |
+| `false`          | Don't remove whitespace                                         |
+
+**Default**: <code>true</code>  
+**Category**: [Core](@/api/core.md)  
+**Example**  
+```js
+columns: [
+  {
+    // don't remove whitespace
+    // from any cell of this column
+    trimWhitespace: false
+  }
+]
 ```
 
 
 ### type
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4314
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4346
 
 :::
 
@@ -4460,17 +4523,17 @@ Read more:
 **Category**: [Core](@/api/core.md)  
 **Example**  
 ```js
-// use the `numeric` cell type for every cell of the entire grid
+// set the `numeric` cell type for each cell of the entire grid
 type: `'numeric'`,
 
 // apply the `type` option to individual columns
 columns: [
   {
-    // use the `autocomplete` cell type for every cell of this column
+    // set the `autocomplete` cell type for each cell of this column
     type: 'autocomplete'
   },
   {
-    // use the `myCustomCellType` cell type for every cell of this column
+    // set the `myCustomCellType` cell type for each cell of this column
     type: 'myCustomCellType'
   }
 ]
@@ -4479,7 +4542,7 @@ columns: [
 
 ### uncheckedTemplate
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4357
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4389
 
 :::
 
@@ -4506,13 +4569,13 @@ Read more:
 ```js
 columns: [
   {
-    // set the `type` of every cell in this column to `checkbox`
+    // set the `type` of each cell in this column to `checkbox`
     // when unchecked, the cell's value is `false`
     // when checked, the cell's value is `true`
     type: 'checkbox',
   },
   {
-    // set the `type` of every cell in this column to `checkbox`
+    // set the `type` of each cell in this column to `checkbox`
     // when unchecked, the cell's value is `'No'`
     // when checked, the cell's value is `'Yes'`
     type: 'checkbox',
@@ -4525,7 +4588,7 @@ columns: [
 
 ### undo
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4388
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4420
 
 :::
 
@@ -4559,7 +4622,7 @@ undo: true,
 
 ### validator
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4448
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4480
 
 :::
 
@@ -4621,7 +4684,7 @@ columns: [
 
 ### viewportColumnRenderingOffset
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4476
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4508
 
 :::
 
@@ -4651,7 +4714,7 @@ viewportColumnRenderingOffset: 70,
 
 ### viewportRowRenderingOffset
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4505
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4537
 
 :::
 
@@ -4682,7 +4745,7 @@ viewportRowRenderingOffset: 70,
 
 ### visibleRows
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4540
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4572
 
 :::
 
@@ -4705,13 +4768,13 @@ columns: [
   {
     type: 'autocomplete',
     // set the `autocomplete` list's height to 15 options
-    // for every cell of this column
+    // for each cell of this column
     visibleRows: 15,
   },
   {
     type: 'dropdown',
     // set the `dropdown` list's height to 5 options
-    // for every cell of this column
+    // for each cell of this column
     visibleRows: 5,
   }
 ],
@@ -4720,7 +4783,7 @@ columns: [
 
 ### width
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4575
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4607
 
 :::
 
@@ -4758,7 +4821,7 @@ width() {
 
 ### wordWrap
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L4614
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L4646
 
 :::
 
@@ -4801,7 +4864,7 @@ columns: [
 
 ### isEmptyCol
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2382
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2413
 
 :::
 
@@ -4830,7 +4893,7 @@ isEmptyCol(visualColumnIndex) {
 
 ### isEmptyRow
   
-::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2419
+::: source-code-link https://github.com/handsontable/handsontable/blob/2c07f78873704f665754ecec76d7597ef5e8b8d3/handsontable/src/dataMap/metaManager/metaSchema.js#L2450
 
 :::
 
