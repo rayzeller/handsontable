@@ -22,7 +22,7 @@ while the `colspan` property defines a number of columns that the header should 
 __Note__ that the plugin supports a *nested* structure, which means, any header cannot be wider than it's "parent". In
 other words, headers cannot overlap each other.
 
-**Example**
+**Example**  
 ```js
 const container = document.getElementById('example');
 const hot = new Handsontable(container, {
@@ -38,8 +38,8 @@ const hot = new Handsontable(container, {
 ## Options
 
 ### nestedHeaders
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/dataMap/metaManager/metaSchema.js#L3093
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L3093
 
 :::
 
@@ -60,8 +60,8 @@ Read more:
 - [Plugins: `NestedHeaders`](@/api/nestedHeaders.md)
 - [Column groups: Nested headers](@/guides/columns/column-groups.md#nested-headers)
 
-**Default**: <code>undefined</code>
-**Example**
+**Default**: <code>undefined</code>  
+**Example**  
 ```js
 nestedHeaders: [
   ['A', {label: 'B', colspan: 8}, 'C'],
@@ -73,8 +73,8 @@ nestedHeaders: [
 ## Members
 
 ### detectedOverlappedHeaders
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L92
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L92
 
 :::
 
@@ -87,8 +87,8 @@ configuration.
 ## Methods
 
 ### destroy
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L605
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L605
 
 :::
 
@@ -99,8 +99,8 @@ Destroys the plugin instance.
 
 
 ### disablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L199
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L199
 
 :::
 
@@ -111,8 +111,8 @@ Disables the plugin functionality for this Handsontable instance.
 
 
 ### enablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L106
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L106
 
 :::
 
@@ -123,8 +123,8 @@ Enables the plugin functionality for this Handsontable instance.
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L99
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L99
 
 :::
 
@@ -135,8 +135,8 @@ Check if plugin is enabled.
 
 
 ### updatePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L141
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/nestedHeaders/nestedHeaders.js#L141
 
 :::
 
@@ -146,3 +146,5 @@ Updates the plugin's state.
 
 This method is executed when [`updateSettings()`](@/api/core.md#updatesettings) is invoked with any of the following configuration options:
  - [`nestedHeaders`](@/api/options.md#nestedheaders)
+
+

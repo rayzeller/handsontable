@@ -24,8 +24,8 @@ The plugin creates additional components to make resizing possibly using user in
 ## Options
 
 ### manualRowResize
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/dataMap/metaManager/metaSchema.js#L2790
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2790
 
 :::
 
@@ -44,8 +44,8 @@ You can set the `manualRowResize` option to one of the following:
 Read more:
 - [Row height: Adjust the row height manually](@/guides/rows/row-height.md#adjust-the-row-height-manually)
 
-**Default**: <code>undefined</code>
-**Example**
+**Default**: <code>undefined</code>  
+**Example**  
 ```js
 // enable the `ManualRowResize` plugin
 manualColumnResize: true,
@@ -60,8 +60,8 @@ manualColumnResize: [40, 50, 60],
 ## Methods
 
 ### destroy
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L598
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L598
 
 :::
 
@@ -72,8 +72,8 @@ Destroys the plugin instance.
 
 
 ### disablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L130
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L130
 
 :::
 
@@ -84,8 +84,8 @@ Disables the plugin functionality for this Handsontable instance.
 
 
 ### enablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L98
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L98
 
 :::
 
@@ -96,8 +96,8 @@ Enables the plugin functionality for this Handsontable instance.
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L91
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L91
 
 :::
 
@@ -109,8 +109,8 @@ hook and if it returns `true` than the [ManualRowResize#enablePlugin](@/api/manu
 
 
 ### loadManualRowHeights
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L156
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L156
 
 :::
 
@@ -119,12 +119,12 @@ _manualRowResize.loadManualRowHeights() ⇒ Array_
 Loads the previously saved sizes using the persistentState plugin (the [Options#persistentState](@/api/options.md#persistentstate) option
 has be enabled).
 
-**Emits**: [`Hooks#event:persistentStateLoad`](@/api/hooks.md#persistentstateload)
+**Emits**: [`Hooks#event:persistentStateLoad`](@/api/hooks.md#persistentstateload)  
 
 
 ### saveManualRowHeights
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L145
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L145
 
 :::
 
@@ -133,12 +133,12 @@ _manualRowResize.saveManualRowHeights()_
 Saves the current sizes using the persistentState plugin (the [Options#persistentState](@/api/options.md#persistentstate) option has to be
 enabled).
 
-**Emits**: [`Hooks#event:persistentStateSave`](@/api/hooks.md#persistentstatesave)
+**Emits**: [`Hooks#event:persistentStateSave`](@/api/hooks.md#persistentstatesave)  
 
 
 ### setManualSize
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L171
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L171
 
 :::
 
@@ -153,11 +153,11 @@ Sets the new height for specified row index.
 | height | `number` | Row height. |
 
 
-**Returns**: `number` - Returns new height.
+**Returns**: `number` - Returns new height.  
 
 ### updatePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualRowResize/manualRowResize.js#L120
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualRowResize/manualRowResize.js#L120
 
 :::
 
@@ -167,3 +167,5 @@ Updates the plugin's state.
 
 This method is executed when [`updateSettings()`](@/api/core.md#updatesettings) is invoked with any of the following configuration options:
  - [`manualRowResize`](@/api/options.md#manualrowresize)
+
+

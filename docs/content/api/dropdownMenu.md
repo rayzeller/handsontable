@@ -25,7 +25,7 @@ or array of any available strings:
 
 See [the dropdown menu demo](@/guides/columns/column-menu.md) for examples.
 
-**Example**
+**Example**  
 ```js
 const container = document.getElementById('example');
 const hot = new Handsontable(container, {
@@ -47,8 +47,8 @@ const hot = new Handsontable(container, {
 ## Options
 
 ### dropdownMenu
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/dataMap/metaManager/metaSchema.js#L1702
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1702
 
 :::
 
@@ -69,8 +69,8 @@ Read more:
 - [Context menu](@/guides/accessories-and-menus/context-menu.md)
 - [Plugins: `DropdownMenu`](@/api/dropdownMenu.md)
 
-**Default**: <code>undefined</code>
-**Example**
+**Default**: <code>undefined</code>  
+**Example**  
 ```js
 // enable the `DropdownMenu` plugin
 // use the default context menu options
@@ -109,8 +109,8 @@ dropdownMenu: {
 ## Members
 
 ### DEFAULT_ITEMS
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L89
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L89
 
 :::
 
@@ -122,8 +122,8 @@ Default menu items order when `dropdownMenu` is enabled by setting the config it
 ## Methods
 
 ### close
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L261
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L261
 
 :::
 
@@ -134,8 +134,8 @@ Closes dropdown menu.
 
 
 ### destroy
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L429
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L429
 
 :::
 
@@ -146,8 +146,8 @@ Destroys the plugin instance.
 
 
 ### disablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L216
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L216
 
 :::
 
@@ -158,8 +158,8 @@ Disables the plugin functionality for this Handsontable instance.
 
 
 ### enablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L155
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L155
 
 :::
 
@@ -167,12 +167,12 @@ _dropdownMenu.enablePlugin()_
 
 Enables the plugin functionality for this Handsontable instance.
 
-**Emits**: [`Hooks#event:afterDropdownMenuDefaultOptions`](@/api/hooks.md#afterdropdownmenudefaultoptions), [`Hooks#event:beforeDropdownMenuSetItems`](@/api/hooks.md#beforedropdownmenusetitems)
+**Emits**: [`Hooks#event:afterDropdownMenuDefaultOptions`](@/api/hooks.md#afterdropdownmenudefaultoptions), [`Hooks#event:beforeDropdownMenuSetItems`](@/api/hooks.md#beforedropdownmenusetitems)  
 
 
 ### executeCommand
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L294
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L294
 
 :::
 
@@ -209,8 +209,8 @@ Or you can execute command registered in settings where `key` is your command na
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L145
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L145
 
 :::
 
@@ -222,8 +222,8 @@ hook and if it returns `true` than the [DropdownMenu#enablePlugin](@/api/dropdow
 
 
 ### open
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L246
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L246
 
 :::
 
@@ -231,7 +231,7 @@ _dropdownMenu.open(position)_
 
 Opens menu and re-position it based on the passed coordinates.
 
-**Emits**: [`Hooks#event:beforeDropdownMenuShow`](@/api/hooks.md#beforedropdownmenushow), [`Hooks#event:afterDropdownMenuShow`](@/api/hooks.md#afterdropdownmenushow)
+**Emits**: [`Hooks#event:beforeDropdownMenuShow`](@/api/hooks.md#beforedropdownmenushow), [`Hooks#event:afterDropdownMenuShow`](@/api/hooks.md#afterdropdownmenushow)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -240,8 +240,8 @@ Opens menu and re-position it based on the passed coordinates.
 
 
 ### updatePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L207
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/dropdownMenu/dropdownMenu.js#L207
 
 :::
 
@@ -251,3 +251,5 @@ Updates the plugin's state.
 
 This method is executed when [`updateSettings()`](@/api/core.md#updatesettings) is invoked with any of the following configuration options:
  - [`dropdownMenu`](@/api/options.md#dropdownmenu)
+
+

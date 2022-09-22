@@ -38,7 +38,7 @@ or array of any available strings:
 
 See [the context menu demo](@/guides/accessories-and-menus/context-menu.md) for examples.
 
-**Example**
+**Example**  
 ```js
 // as a boolean
 contextMenu: true
@@ -49,8 +49,8 @@ contextMenu: ['row_above', 'row_below', '---------', 'undo', 'redo']
 ## Options
 
 ### contextMenu
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/dataMap/metaManager/metaSchema.js#L1075
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L1075
 
 :::
 
@@ -74,8 +74,8 @@ Read more:
 - [Context menu: Context menu with fully custom configuration options](@/guides/accessories-and-menus/context-menu.md#context-menu-with-fully-custom-configuration)
 - [Plugins: `ContextMenu`](@/api/contextMenu.md)
 
-**Default**: <code>undefined</code>
-**Example**
+**Default**: <code>undefined</code>  
+**Example**  
 ```js
 // enable the `ContextMenu` plugin
 // use the default context menu options
@@ -114,8 +114,8 @@ contextMenu: {
 ## Members
 
 ### ContextMenu
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L112
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L112
 
 :::
 
@@ -124,8 +124,8 @@ _contextMenu.[ContextMenu](@/api/contextMenu.md)_
 
 
 ### DEFAULT_ITEMS
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L93
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L93
 
 :::
 
@@ -137,8 +137,8 @@ Context menu default items order when `contextMenu` options is set as `true`.
 ## Methods
 
 ### close
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L251
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L251
 
 :::
 
@@ -149,8 +149,8 @@ Closes the menu.
 
 
 ### destroy
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L392
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L392
 
 :::
 
@@ -161,8 +161,8 @@ Destroys the plugin instance.
 
 
 ### disablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L200
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L200
 
 :::
 
@@ -173,8 +173,8 @@ Disables the plugin functionality for this Handsontable instance.
 
 
 ### enablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L157
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L157
 
 :::
 
@@ -185,8 +185,8 @@ Enables the plugin functionality for this Handsontable instance.
 
 
 ### executeCommand
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L286
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L286
 
 :::
 
@@ -223,8 +223,8 @@ Or you can execute command registered in settings where `key` is your command na
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L150
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L150
 
 :::
 
@@ -236,8 +236,8 @@ hook and if it returns `true` than the [ContextMenu#enablePlugin](@/api/contextM
 
 
 ### open
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L215
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L215
 
 :::
 
@@ -253,8 +253,8 @@ Opens menu and re-position it based on the passed coordinates.
 
 
 ### updatePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/contextMenu/contextMenu.js#L190
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/contextMenu/contextMenu.js#L190
 
 :::
 
@@ -264,3 +264,5 @@ Updates the plugin's state.
 
 This method is executed when [`updateSettings()`](@/api/core.md#updatesettings) is invoked with any of the following configuration options:
  - [`contextMenu`](@/api/options.md#contextmenu)
+
+

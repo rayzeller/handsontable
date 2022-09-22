@@ -20,8 +20,8 @@ included in a dataset, but skipped in the process of rendering.
 ## Methods
 
 ### getHiddenIndexes
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/translations/maps/hidingMap.js#L22
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/translations/maps/hidingMap.js#L22
 
 :::
 
@@ -30,3 +30,5 @@ _hidingMap.getHiddenIndexes() ⇒ Array_
 Get physical indexes which are hidden.
 
 Note: Indexes marked as hidden are included in a [DataMap](@/api/dataMap.md), but aren't rendered.
+
+

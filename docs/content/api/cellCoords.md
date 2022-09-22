@@ -13,8 +13,8 @@ editLink: false
 ## Members
 
 ### col
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L18
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L18
 
 :::
 
@@ -25,8 +25,8 @@ Column index.
 
 
 ### row
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L12
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L12
 
 :::
 
@@ -38,8 +38,8 @@ Row index.
 ## Methods
 
 ### clone
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L128
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L128
 
 :::
 
@@ -50,8 +50,8 @@ Clones the coordinates.
 
 
 ### isEqual
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L58
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L58
 
 :::
 
@@ -67,8 +67,8 @@ Checks if this cell coordinates are the same as cell coordinates given as an arg
 
 
 ### isNorthEastOf
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L105
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L105
 
 :::
 
@@ -84,8 +84,8 @@ Checks if tested coordinates are positioned in north-east from this cell coordin
 
 
 ### isNorthWestOf
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L83
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L83
 
 :::
 
@@ -101,8 +101,8 @@ Checks if tested coordinates are positioned in north-east from this cell coordin
 
 
 ### isSouthEastOf
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L72
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L72
 
 :::
 
@@ -118,8 +118,8 @@ Checks if tested coordinates are positioned in south-east from this cell coordin
 
 
 ### isSouthWestOf
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L94
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L94
 
 :::
 
@@ -135,8 +135,8 @@ Checks if tested coordinates are positioned in south-west from this cell coordin
 
 
 ### isValid
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L39
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L39
 
 :::
 
@@ -152,8 +152,8 @@ Checks if given set of coordinates is valid in context of a given Walkontable in
 
 
 ### normalize
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L116
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L116
 
 :::
 
@@ -165,8 +165,8 @@ to the headers (negative values) are normalized to 0.
 
 
 ### toObject
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L137
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/3rdparty/walkontable/src/cell/coords.js#L137
 
 :::
 
@@ -175,4 +175,4 @@ _cellCoords.toObject() ⇒ object_
 Converts CellCoords to literal object with `row` and `col` properties.
 
 
-**Returns**: `object` - Returns a literal object with `row` and `col` properties.
+**Returns**: `object` - Returns a literal object with `row` and `col` properties.  

@@ -20,8 +20,8 @@ provided by the ChangesObservable module.
 ## Methods
 
 ### subscribe
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/translations/changesObservable/observer.js#L26
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/translations/changesObservable/observer.js#L26
 
 :::
 
@@ -37,8 +37,8 @@ Subscribes to the observer.
 
 
 ### unsubscribe
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/translations/changesObservable/observer.js#L39
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/translations/changesObservable/observer.js#L39
 
 :::
 
@@ -46,3 +46,5 @@ _changesObserver.unsubscribe() ⇒ [ChangesObserver](@/api/changesObserver.md)_
 
 Unsubscribes all subscriptions. After the method call, the observer would not produce
 any new events.
+
+

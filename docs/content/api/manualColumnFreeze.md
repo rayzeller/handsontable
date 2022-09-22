@@ -16,7 +16,7 @@ editLink: false
 This plugin allows to manually "freeze" and "unfreeze" a column using an entry in the Context Menu or using API.
 You can turn it on by setting a [Options#manualColumnFreeze](@/api/options.md#manualcolumnfreeze) property to `true`.
 
-**Example**
+**Example**  
 ```js
 // Enables the plugin
 manualColumnFreeze: true,
@@ -25,8 +25,8 @@ manualColumnFreeze: true,
 ## Options
 
 ### manualColumnFreeze
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/dataMap/metaManager/metaSchema.js#L2655
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/dataMap/metaManager/metaSchema.js#L2655
 
 :::
 
@@ -44,8 +44,8 @@ You can set the `manualColumnFreeze` option to one of the following:
 Read more:
 - [Column freezing](@/guides/columns/column-freezing.md#user-triggered-freeze)
 
-**Default**: <code>undefined</code>
-**Example**
+**Default**: <code>undefined</code>  
+**Example**  
 ```js
 // enable the `ManualColumnFreeze` plugin
 manualColumnFreeze: true,
@@ -54,8 +54,8 @@ manualColumnFreeze: true,
 ## Methods
 
 ### disablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L77
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L77
 
 :::
 
@@ -66,8 +66,8 @@ Disables the plugin functionality for this Handsontable instance.
 
 
 ### enablePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L63
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L63
 
 :::
 
@@ -78,8 +78,8 @@ Enables the plugin functionality for this Handsontable instance.
 
 
 ### freezeColumn
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L106
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L106
 
 :::
 
@@ -98,8 +98,8 @@ so you need to call the `render()` method afterward.
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L56
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L56
 
 :::
 
@@ -111,8 +111,8 @@ hook and if it returns `true` than the [ManualColumnFreeze#enablePlugin](@/api/m
 
 
 ### unfreezeColumn
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L141
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L141
 
 :::
 
@@ -128,8 +128,8 @@ Unfreezes the given column (remove it from fixed columns and bring to it's previ
 
 
 ### updatePlugin
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L91
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/manualColumnFreeze/manualColumnFreeze.js#L91
 
 :::
 
@@ -139,3 +139,5 @@ Updates the plugin's state.
 
 This method is executed when [`updateSettings()`](@/api/core.md#updatesettings) is invoked with any of the following configuration options:
  - [`manualColumnFreeze`](@/api/options.md#manualcolumnfreeze)
+
+

@@ -18,7 +18,7 @@ CSV format.
 
 See [the export file demo](@/guides/accessories-and-menus/export-to-csv.md) for examples.
 
-**Example**
+**Example**  
 ```js
 const container = document.getElementById('example');
 const hot = new Handsontable(container, {
@@ -51,8 +51,8 @@ exportPlugin.exportAsString('csv', {
 ## Members
 
 ### ExportOptions
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/exportFile/exportFile.js#L67
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/exportFile/exportFile.js#L67
 
 :::
 
@@ -73,8 +73,8 @@ _ExportFile.ExportOptions : object_
 ## Methods
 
 ### downloadFile
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/exportFile/exportFile.js#L107
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/exportFile/exportFile.js#L107
 
 :::
 
@@ -91,8 +91,8 @@ Exports table data as a downloadable file.
 
 
 ### exportAsBlob
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/exportFile/exportFile.js#L97
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/exportFile/exportFile.js#L97
 
 :::
 
@@ -109,8 +109,8 @@ Exports table data as a blob object.
 
 
 ### exportAsString
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/exportFile/exportFile.js#L86
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/exportFile/exportFile.js#L86
 
 :::
 
@@ -127,8 +127,8 @@ Exports table data as a string.
 
 
 ### isEnabled
-
-::: source-code-link https://github.com/handsontable/handsontable/blob/06d2c9b9d7d53dde2227350b0ab4d84a7ab93b97/handsontable/src/plugins/exportFile/exportFile.js#L63
+  
+::: source-code-link https://github.com/handsontable/handsontable/blob/64f97eb0ceb430810b0aac02994b1e817d6139d9/handsontable/src/plugins/exportFile/exportFile.js#L63
 
 :::
 
@@ -136,3 +136,5 @@ _exportFile.isEnabled() ⇒ boolean_
 
 Checks if the plugin is enabled in the handsontable settings. This method is executed in [Hooks#beforeInit](@/api/hooks.md#beforeinit)
 hook and if it returns `true` than the [ExportFile#enablePlugin](@/api/exportFile.md#enableplugin) method is called.
+
+
