@@ -23,8 +23,8 @@
  * TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 
- * Version: 6.2.2
- * Release date: 19/12/2018 (built at 18/12/2018 14:40:17)
+ * Version: 6.2.5
+ * Release date: 19/12/2018 (built at 27/09/2022 22:34:05)
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
@@ -27570,7 +27570,7 @@ DefaultSettings.prototype = {
    * To configure the sync/async distribution, you can pass an absolute value (number of columns) or a percentage value.
    *
    * @type {Object|Boolean}
-   * @default {syncLimit: 500}
+   * @default {syncLimit: 500, calculationStep: 50}
    *
    * @example
    * ```js
@@ -29734,9 +29734,9 @@ Handsontable.DefaultSettings = _defaultSettings.default;
 Handsontable.EventManager = _eventManager.default;
 Handsontable._getListenersCounter = _eventManager.getListenersCounter; // For MemoryLeak tests
 
-Handsontable.buildDate = "18/12/2018 14:40:17";
+Handsontable.buildDate = "27/09/2022 22:34:05";
 Handsontable.packageName = "handsontable";
-Handsontable.version = "6.2.2";
+Handsontable.version = "6.2.5";
 var baseVersion = "";
 
 if (baseVersion) {
@@ -44951,6 +44951,7 @@ function (_BasePlugin) {
       var length = this.hot.countRows() - 1;
       var timer = null;
       this.inProgress = true;
+      var calculationStep = this.getCalculationStep();
 
       var loop = function loop() {
         // When hot was destroyed after calculating finished cancel frame
@@ -44962,10 +44963,10 @@ function (_BasePlugin) {
 
         _this4.calculateRowsHeight({
           from: current,
-          to: Math.min(current + AutoRowSize.CALCULATION_STEP, length)
+          to: Math.min(current + calculationStep, length)
         }, colRange);
 
-        current = current + AutoRowSize.CALCULATION_STEP + 1;
+        current = current + calculationStep + 1;
 
         if (current < length) {
           timer = (0, _feature.requestAnimationFrame)(loop);
@@ -45060,6 +45061,28 @@ function (_BasePlugin) {
       }
 
       return Math.min(limit, rowsLimit);
+    }
+    /**
+     * Gets value which tells how many rows should be calculated before initially rendering the table.
+     * The limit is calculated based on `calculationStep` set to autoRowSize option (see {@link Options#autoRowSize}).
+     *
+     * @returns {Number}
+     */
+
+  }, {
+    key: "getCalculationStep",
+    value: function getCalculationStep() {
+      /* eslint-disable no-bitwise */
+      var step = AutoRowSize.CALCULATION_STEP;
+      var rowsLimit = this.hot.countRows() - 1;
+
+      if ((0, _object.isObject)(this.hot.getSettings().autoRowSize)) {
+        step = this.hot.getSettings().autoRowSize.calculationStep; // Force to Number
+
+        step >>= 0;
+      }
+
+      return Math.min(step, rowsLimit);
     }
     /**
      * Gets the calculated row height.
