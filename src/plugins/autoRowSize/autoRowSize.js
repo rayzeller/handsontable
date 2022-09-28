@@ -301,25 +301,25 @@ class AutoRowSize extends BasePlugin {
     return Math.min(limit, rowsLimit);
   }
 
-    /**
+  /**
    * Gets value which tells how many rows should be calculated before initially rendering the table.
    * The limit is calculated based on `calculationStep` set to autoRowSize option (see {@link Options#autoRowSize}).
    *
    * @returns {Number}
    */
-    getCalculationStep() {
-      /* eslint-disable no-bitwise */
-      let step = AutoRowSize.CALCULATION_STEP;
-      const rowsLimit = this.hot.countRows() - 1;
-  
-      if (isObject(this.hot.getSettings().autoRowSize)) {
-        step = this.hot.getSettings().autoRowSize.calculationStep;
-        // Force to Number
-        step >>= 0;
-      }
-  
-      return Math.min(limit, rowsLimit);
+  getCalculationStep() {
+    /* eslint-disable no-bitwise */
+    let step = AutoRowSize.CALCULATION_STEP;
+    const rowsLimit = this.hot.countRows() - 1;
+
+    if (isObject(this.hot.getSettings().autoRowSize)) {
+      step = this.hot.getSettings().autoRowSize.calculationStep;
+      // Force to Number
+      step >>= 0;
     }
+
+    return Math.min(step, rowsLimit);
+  }
 
   /**
    * Gets the calculated row height.
