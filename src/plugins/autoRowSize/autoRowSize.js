@@ -203,7 +203,7 @@ class AutoRowSize extends BasePlugin {
     let timer = null;
 
     this.inProgress = true;
-
+    const calculationStep = this.getCalculationStep();
     const loop = () => {
       // When hot was destroyed after calculating finished cancel frame
       if (!this.hot) {
@@ -212,8 +212,8 @@ class AutoRowSize extends BasePlugin {
 
         return;
       }
-      this.calculateRowsHeight({ from: current, to: Math.min(current + AutoRowSize.CALCULATION_STEP, length) }, colRange);
-      current = current + AutoRowSize.CALCULATION_STEP + 1;
+      this.calculateRowsHeight({ from: current, to: Math.min(current + calculationStep, length) }, colRange);
+      current = current + calculationStep + 1;
 
       if (current < length) {
         timer = requestAnimationFrame(loop);
@@ -300,6 +300,26 @@ class AutoRowSize extends BasePlugin {
 
     return Math.min(limit, rowsLimit);
   }
+
+    /**
+   * Gets value which tells how many rows should be calculated before initially rendering the table.
+   * The limit is calculated based on `calculationStep` set to autoRowSize option (see {@link Options#autoRowSize}).
+   *
+   * @returns {Number}
+   */
+    getCalculationStep() {
+      /* eslint-disable no-bitwise */
+      let step = AutoRowSize.CALCULATION_STEP;
+      const rowsLimit = this.hot.countRows() - 1;
+  
+      if (isObject(this.hot.getSettings().autoRowSize)) {
+        step = this.hot.getSettings().autoRowSize.calculationStep;
+        // Force to Number
+        step >>= 0;
+      }
+  
+      return Math.min(limit, rowsLimit);
+    }
 
   /**
    * Gets the calculated row height.
