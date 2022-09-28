@@ -2180,7 +2180,7 @@ DefaultSettings.prototype = {
    * To configure the sync/async distribution, you can pass an absolute value (number of columns) or a percentage value.
    *
    * @type {Object|Boolean}
-   * @default {syncLimit: 500}
+   * @default {syncLimit: 500, calculationStep: 50}
    *
    * @example
    * ```js
